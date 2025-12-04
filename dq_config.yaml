@@ -1,0 +1,28 @@
+tables:
+  delivery_logistics:
+    table_name: delivery_logistics
+    path: archive/Delivery_Logistics.csv
+    primary_key:
+      - delivery_id
+    timestamp_col_candidates:
+      - event_time
+      - pickup_time
+      - created_at
+      - dropoff_time
+    numeric_ranges:
+      distance_km:
+        min: 0.0
+        max: 1000.0
+      duration_min:
+        min: 0.0
+        max: 1440.0
+      cost:
+        min: 0.0
+        max: null
+    bdq_rules:
+      - rule_delivered_has_dropoff
+      - rule_dropoff_after_pickup
+      - rule_distance_duration_consistent
+    categorical_cols:
+      - city
+      - status

@@ -1,0 +1,14 @@
+# Versions tested with Python 3.13.2 on Windows
+# IMPORTANT: pandas 2.2.3+ is required for Python 3.13 (has prebuilt wheels)
+# For production Spark workloads, Python 3.11 is recommended
+
+pyspark>=3.5.0
+pandas>=2.2.3  # Must be 2.2.3+ for Python 3.13 support
+matplotlib>=3.9.0
+plotly>=5.23.0
+
+# Optional, for richer environments
+pyarrow>=17.0.0
+numpy>=1.26.0
+pyyaml>=6.0.0
+python-dotenv>=1.0.0
